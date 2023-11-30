@@ -6,7 +6,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesda
 #subsets the dataframe to only attributes of interest
 taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 
-##Questions:
+#Questions:
 #1: What is the most danceable song?
 #2: What is the most danceable album on average?
 #3: Who is featured the most on Taylor's songs?
@@ -34,3 +34,18 @@ featured_artists = taylor_data[['featuring', 'track_name']].groupby(['featuring'
 #print(featured_artists.first())
 
 
+
+
+
+#Question 4:  What is the most energetic song?
+dancing = real_data[['track_name', 'energy']].sort_values('danceability', ascending=True)
+dancing_max = dancing.tail(1)
+#print(dancing_max)
+#Observe that the track '   ' is the most energetic with a energy level of 0.
+
+#Question 5: What is the most energetic album on average?
+dancing_albums = real_data[['album_name', 'energy']].groupby(['album_name'])
+dancing_albums_sorted = dancing_albums.first().sort_values('danceability', ascending=True)
+dancing_albums_max = dancing_albums_sorted.tail(1)
+print(dancing_albums_max)
+#Observe that the album '   ' is the most energetic with an average energy level of 0.
