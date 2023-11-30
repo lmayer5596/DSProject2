@@ -38,14 +38,17 @@ featured_artists = taylor_data[['featuring', 'track_name']].groupby(['featuring'
 
 
 #Question 4:  What is the most energetic song?
-dancing = real_data[['track_name', 'energy']].sort_values('danceability', ascending=True)
-dancing_max = dancing.tail(1)
-#print(dancing_max)
-#Observe that the track '   ' is the most energetic with a energy level of 0.
+energy = taylor_data[['track_name', 'energy']].sort_values('energy', ascending=False)
+energy_max = energy.head(1)
+#print(energy_max)
+#Observe that the track 'Haunted' is the most energetic with a energy level of 0.95
 
 #Question 5: What is the most energetic album on average?
-dancing_albums = real_data[['album_name', 'energy']].groupby(['album_name'])
-dancing_albums_sorted = dancing_albums.first().sort_values('danceability', ascending=True)
-dancing_albums_max = dancing_albums_sorted.tail(1)
-print(dancing_albums_max)
-#Observe that the album '   ' is the most energetic with an average energy level of 0.
+energy_albums = taylor_data[['album_name', 'energy']].groupby(['album_name'])
+energy_albums_sorted = energy_albums.first().sort_values('energy', ascending=False)
+energy_albums_max = energy_albums_sorted.head(1)
+print(energy_albums_max)
+#Observe that the album 'Red' is the most energetic with an average energy level of 0.825
+
+#Question 6: How does energy correlate to danceability?
+
