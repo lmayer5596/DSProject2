@@ -1,3 +1,24 @@
-test
-Hello
-YURR
+import pandas as pd
+
+#reads in dataset fron github
+data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-17/taylor_all_songs.csv')
+
+#subsets the dataframe to only attributes of interest
+real_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
+
+##Questions:
+#1: What is the most danceable song?
+#2: What is the most danceable album on average?
+#3: Who is featured the most on Taylor's songs?
+#4: What is the most energetic song?
+#5: What is the most energetic album on average?
+#6: What artist features Taylor the most?
+#7: What is the trend in acousticness over time?
+
+#Question 1: What is the most danceable song?
+dancing = data[['track_name', 'danceability']].sort_values('danceability', ascending=False)
+dancing_max = dancing.head(1)
+print(dancing_max)
+#Observe that the track 'I Think He Knows' is the most danceable with a danceability of 0.897
+
+#Question 2: What is the most danceable album on average?
