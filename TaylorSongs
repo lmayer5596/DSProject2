@@ -4,7 +4,7 @@ import pandas as pd
 data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-17/taylor_all_songs.csv')
 
 #subsets the dataframe to only attributes of interest
-real_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
+taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 
 ##Questions:
 #1: What is the most danceable song?
@@ -17,14 +17,20 @@ real_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_n
 #8: What is the trend in acousticness over time?
 
 #Question 1: What is the most danceable song?
-dancing = real_data[['track_name', 'danceability']].sort_values('danceability', ascending=False)
+dancing = taylor_data[['track_name', 'danceability']].sort_values('danceability', ascending=False)
 dancing_max = dancing.head(1)
 #print(dancing_max)
 #Observe that the track 'I Think He Knows' is the most danceable with a danceability of 0.897
 
 #Question 2: What is the most danceable album on average?
-dancing_albums = real_data[['album_name', 'danceability']].groupby(['album_name'])
+dancing_albums = taylor_data[['album_name', 'danceability']].groupby(['album_name'])
 dancing_albums_sorted = dancing_albums.first().sort_values('danceability', ascending=False)
 dancing_albums_max = dancing_albums_sorted.head(1)
-print(dancing_albums_max)
+#print(dancing_albums_max)
 #Observe that the album '1989' is the most danceable with an average danceability of 0.789
+
+#Question 3: Who is featured the most on Taylor's songs?
+featured_artists = taylor_data[['featuring', 'track_name']].groupby(['featuring'])
+#print(featured_artists.first())
+
+
