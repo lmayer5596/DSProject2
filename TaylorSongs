@@ -6,7 +6,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesda
 #subsets the dataframe to only attributes of interest
 real_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 
-##Questions:
+#Questions:
 #1: What is the most danceable song?
 #2: What is the most danceable album on average?
 #3: Who is featured the most on Taylor's songs?
