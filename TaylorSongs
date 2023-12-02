@@ -45,7 +45,6 @@ print(energy_albums_max)
 #Question 5: How does energy correlate to danceability?
 energy_lst = pd.DataFrame(energy)['energy'].tolist()
 dancing_lst = pd.DataFrame(dancing)['danceability'].tolist()
-
 plt.scatter(energy_lst, dancing_lst)
 
 #Question 6: What is the most acoustic song?
