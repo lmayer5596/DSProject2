@@ -58,7 +58,6 @@ print(acoustic_albums_max)
 #Observe that the album 'evermore' is the most acoustic with an average acousticness of 0.833
 
 #Question 8: What is the trend in acousticness over time?
-
 energy_df = pd.DataFrame(energy)
 energy_lst = energy_df['energy'].tolist()
 
