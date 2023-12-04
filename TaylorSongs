@@ -46,6 +46,7 @@ print(energy_albums_max)
 energy_lst = pd.DataFrame(energy)['energy'].tolist()
 dancing_lst = pd.DataFrame(dancing)['danceability'].tolist()
 plt.scatter(energy_lst, dancing_lst)
+plt.show()
 #Observe that the energy and danceability are almost linearly related. As energy of the song increases, so the the danceability.
 
 #Question 6: What is the most acoustic song?
