@@ -1,15 +1,14 @@
 # Lily Mayer
-
+Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results 
 
 # Gina Seo
-
+Worked with other members to create the code outline. Also helped contribute to finalizing SQL queries. Developed a good work ethic and management with the other teamates.
 
 # Jesigga Sigurdardottir 
-
+Found and finalized dataframe, finalized formating, created questions, and worked on explenations of wuestions.
 
 # Kiley Wonser
-
-
+Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
 
 ```python
 import pandas as pd
