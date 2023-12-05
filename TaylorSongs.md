@@ -18,17 +18,17 @@ print(taylor_data)
 #Questions:
 # 1. What is the most danceable song?
  Spotify's API takes in all the elements that went into creating a song and gives it a score from 0.0 to 1.0 on how "danceable" it is. Based on the how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity
-# 1. What is the most danceable album? 
+# 2. What is the most danceable album? 
  Out of all the songs that were released from 2006 to 2023, this only takes in songs that were released as part of an album while excluding any songs that are not part of the main albums. This would mean that it takes in the average danceability score from each album and compare it to scores from other albums
-# 1. What is the most energetic song?
+# 3. What is the most energetic song?
 Based on perceptual measure of intensity and activity between 0.0 and 1.0 typically sounding more fast, loud, and noisy with more energy.
-# 1. What is the most energetic album on average?
+# 4. What is the most energetic album on average?
 Based on perceptual measure of intensity and activity between 0.0 and 1.0 typically sounding more fast, loud, and noisy with more energy, these values are taken by the average of all the songs on the album.
-# 1. How does energy correlate to danceability?
+# 5. How does energy correlate to danceability?
 Making a graph to see the trend of dancebility vs. energy for each song.
-# 1. What is the most acoustic song?
-# 1. What is sthe most acoustic album?
-# 1. What is the trend in acousticness over time?
+# 6. What is the most acoustic song?
+# 7. What is sthe most acoustic album?
+# 8. What is the trend in acousticness over time?
 
 
 ```python
