@@ -9,7 +9,9 @@ taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track
 
 #Questions:
 #1: What is the most danceable song?
-#2: What is the most danceable album on average?
+#2: What is the most danceable album on average? (Out of all the songs that were released from 2006 to 2023, this only takes in songs
+# that were released as part of an album while excluding any songs that are not part of the main albums. This would mean that it takes
+# in the average danceability score from each album and compare it to scores from other albums)
 #3: What is the most energetic song?
 #4: What is the most energetic album on average?
 #5: How does energy correlate to danceability?
