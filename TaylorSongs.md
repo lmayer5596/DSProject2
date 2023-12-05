@@ -1,13 +1,13 @@
-#Gina Seo
+# Gina Seo
 
 
-#Jesigga Sigurdardottir 
+# Jesigga Sigurdardottir 
 
 
-#Kiley Wonser
+# Kiley Wonser
 
 
-#Lily Mayer
+# Lily Mayer
 
 ```python
 import pandas as pd
@@ -28,7 +28,7 @@ taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track
 print(taylor_data)
 ```
 
-#Questions:
+# Questions:
 # 1. What is the most danceable song?
  Spotify's API takes in all the elements that went into creating a song and gives it a score from 0.0 to 1.0 on how "danceable" it is. Based on the how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity
 
