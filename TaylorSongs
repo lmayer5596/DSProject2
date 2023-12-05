@@ -8,7 +8,8 @@ data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesda
 taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 
 #Questions:
-#1: What is the most danceable song?
+#1: What is the most danceable song? (Spotify's API takes in all the elements that went into creating a song and gives it a score from 0.0
+# to 1.0 on how "danceable" it is)
 #2: What is the most danceable album on average? (Out of all the songs that were released from 2006 to 2023, this only takes in songs
 # that were released as part of an album while excluding any songs that are not part of the main albums. This would mean that it takes
 # in the average danceability score from each album and compare it to scores from other albums)
