@@ -1,3 +1,14 @@
+#Gina Seo
+
+
+#Jesigga Sigurdardottir 
+
+
+#Kiley Wonser
+
+
+#Lily Mayer
+
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,11 +16,13 @@ import matplotlib.pyplot as plt
 
 ```
 
-
+Read in dataset from Github
 ```python
 #reads in dataset fron github
 data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-17/taylor_all_songs.csv')
-
+```
+Subsets of the dataframe with the attributes that we will use.
+```python
 #subsets the dataframe to only attributes of interest
 taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 print(taylor_data)
