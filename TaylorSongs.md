@@ -1,4 +1,5 @@
-# Team and personal Description
+# Team Members and Personal Description
+
 
 ## Lily Mayer
 Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results. 
@@ -14,7 +15,7 @@ Decided upon and finalized the Datta frame used, finalized formatting of code, w
 ## Kiley Wonser
 Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
 
-# 
+
 # Code and Queries 
 
 
