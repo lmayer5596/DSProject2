@@ -12,6 +12,8 @@ Decided upon and finalized the Datta frame used, finalized formatting of code, w
 # Kiley Wonser
 Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
 
+# Code and Queries 
+
 
 ```python
 import pandas as pd
