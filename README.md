@@ -15,10 +15,10 @@ Next up on the re-release schedule was Speak Now [Taylor's Version], which arriv
 
 
 # Progress
-In this project, we will be analyzing an imported dataset from Spotfiy's API on Swift's discography. From the raw data, we have decided to pull out information regarding the ratings of the artist's songs and albums whether it is on danceability, accousticness, etc. 
+In this project, we will analyze an imported dataset from Spotfiy's API on Swift's discography. From the raw data, we have decided to extract information regarding the ratings of the artist's songs and albums whether it is on danceability, accousticness, etc. 
 
-This topic of ours holds big importance to our current times and society as Swift is a major force within the music industry and other sectors as well. It also holds beneficial for those wanting to explore an in depth knowledge of how music streaming services, such as Spotify, put billions of songs into Hadoop-based data lakes and run multiple complex analyses of specific elements that go into each of these productions. 
+Our chosen topic holds significant importance in our current times and society, as Swift is a major force within the music industry and other sectors as well. It also holds benefits for those wanting to explore in-depth knowledge of how music streaming services, such as Spotify, input billions of songs into Hadoop-based data lakes and run multiple complex analyses of specific elements that contribute to each production. 
 
-Going in-depth of our queries and code, our team calculates how and why Swift's discography is made so popular with the general public by analyzing Spotify's raw dataset on danceability, energetic-ness, and accoustic-ness. We then create visual graphs to back up our hypotheses and highlight the trends and statistics of her musical catalog. 
+Delving into our queries and code, our team calculates how and why Swift's discography has become so popular with the general public by analyzing Spotify's raw dataset on danceability, energetic-ness, and accoustic-ness. We then create visual graphs to support our hypotheses and highlight the trends and statistics of her musical catalog. 
 
-With Swift's massive discography, from her debut in 2006 and to present day, we divided the variables into multiple subsets of the dataframe and only include specific attributes of interest. Out of all attributes, our team decided to pick out the album names, date of release, artist, featured artists, song name, danceability, energy, and accoustic. With this information, we then 
+Given Swift's massive discography, from her debut in 2006 to the present day, we divided the variables into multiple subsets of the dataframe and only included specific attributes of interest. Out of all attributes, our team decided to pick out the album names, date of release, artist, featured artists, song name, danceability, energy, and accoustic. With this information, we then 
