@@ -22,8 +22,3 @@ Our chosen topic holds significant importance in our current times and society, 
 Delving into our queries and code, our team calculates how and why Swift's discography has become so popular with the general public by analyzing Spotify's raw dataset on danceability, energetic-ness, and accoustic-ness. We then create visual graphs to support our hypotheses and highlight the trends and statistics of her musical catalog. 
 
 Given Swift's massive discography, from her debut in 2006 to the present day, we divided the variables into multiple subsets of the dataframe and only included specific attributes of interest. Out of all attributes, our team decided to pick out the album names, date of release, artist, featured artists, song name, danceability, energy, and accoustic. With this information, we then created 8 queries that guides us in implementing our code. 
-
-The first two queries look at the most danceable song and most danceble album. The queries list the the albums and songs in decending order of dancibility, then pull the head of the list in order to retrieve the most danceable song and album. The following two queries do the same, but for the energy of the songs and albums to find the most energetic song and album.
-
-
-
