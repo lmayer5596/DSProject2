@@ -2,7 +2,7 @@
 
 
 ## Roshni Gandhi 
-
+ Created the queries for half the questions and fililazation of queries.
 
 
 ## Lily Mayer
