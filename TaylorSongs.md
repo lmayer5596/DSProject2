@@ -1,33 +1,44 @@
-# Lily Mayer
-Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results 
+# Team Members and Personal Description
 
-# Gina Seo
-Worked with other members to create the code outline. Also helped contribute to finalizing SQL queries. Developed a good work ethic and management with the other teamates.
 
-# Jesigga Sigurdardottir 
-Found and finalized dataframe, finalized formating, created questions, and worked on explenations of wuestions.
+## Lily Mayer
+Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results. 
 
-# Kiley Wonser
+
+## Gina Seo
+Worked with other members to create the code outline. Also helped contribute to finalizing SQL queries. Developed a good work ethic and management with the other teammates.
+
+
+## Jesigga Sigurdardottir 
+Decided upon and finalized the Datta frame used, finalized formatting of code, worked on creating questions, and worked on explanations of questions.  
+
+## Kiley Wonser
 Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
+
+
+# Code and Queries 
+
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
 ```
+
 
 Read in dataset from Github
 ```python
 #reads in dataset fron github
 data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-17/taylor_all_songs.csv')
 ```
+
+
 Subsets of the dataframe with the attributes that we will use.
 ```python
 #subsets the dataframe to only attributes of interest
 taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 print(taylor_data)
 ```
+
 
 # Questions:
 # 1. What is the most danceable song?
@@ -66,6 +77,7 @@ print(energy_max)
 ```
 Observe that the track 'Haunted' is the most energetic song with a energy level of 0.95
 
+
 # 4. What is the most energetic album on average?
 Based on perceptual measure of intensity and activity between 0.0 and 1.0 typically sounding more fast, loud, and noisy with more energy, these values are taken by the average of all the songs on the album.
 
@@ -77,6 +89,7 @@ energy_albums_max = energy_albums_sorted.head(1)
 print(energy_albums_max)
 ```
 Observe that the album 'Red' is the most energetic album with an average energy level of 0.825
+
 
 # 5. How does energy correlate to danceability?
 Making a graph to see the trend of dancebility vs. energy for each song.
@@ -95,7 +108,7 @@ Observe that the energy and danceability are almost linearly related. As energy 
 
 
 # 6. What is the most acoustic song?
-
+Based on perceptual measure of acousticness and activity between 0.0 and 1.0.
 
 ```python
 #Question 6: What is the most acoustic song?
@@ -105,8 +118,9 @@ print(acoustic_max)
 ```
 Observe that the track 'It's Nice To Have A Friend' is the most acoustic song with an acousticness of 0.971
 
-# 7. What is sthe most acoustic album?
 
+# 7. What is sthe most acoustic album?
+Based on perceptual measure of acousticness and activity between 0.0 and 1.0. These values are taken by the average of all the songs on the album.
 
 ```python
 #Question 7: What is the most acoustic album?
@@ -117,11 +131,21 @@ print(acoustic_albums_max)
 ```
 Observe that the album 'evermore' is the most acoustic album with an average acousticness of 0.833
 
+
 # 8. What is the trend in acousticness over time?
+Based on perceptual measure of acousticness and activity between 0.0 and 1.0. These values for each song are then graphed compared to time to see the trend in acousticness over time in Taylor's career.
 
 ```python
 #Question 8: What is the trend in acousticness over time?
 acoustic_release = taylor_data[['album_release', 'acousticness']].dropna().sort_values('album_release', ascending=True)
 album_release_dates = pd.DataFrame(acoustic_release)['album_release'].tolist()
 acousticness_values = pd.DataFrame(acoustic_release)['acousticness'].tolist()
+matplotlib.pyplot.subplot(3, 1, 3)
+matplotlib.pyplot.scatter(album_release_dates, acousticness_values)
+matplotlib.pyplot.title("Album Release Dates vs. Acousticness")
+matplotlib.pyplot.xlabel('Album Release Date (YYYY-MM-DD)')
+matplotlib.pyplot.ylabel('Acousticness')
+matplotlib.pyplot.show()
 ```
+Observe that there is no correlation between the date the album was released and acousticness of the album.
+
