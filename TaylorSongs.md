@@ -109,6 +109,7 @@ Observe that the energy and danceability are almost linearly related. As energy 
 
 # 6. What is the most acoustic song?
 Based on perceptual measure of acousticness and activity between 0.0 and 1.0.
+
 ```python
 #Question 6: What is the most acoustic song?
 acoustic = taylor_data[['track_name', 'acousticness']].sort_values('acousticness', ascending=False)
@@ -120,6 +121,7 @@ Observe that the track 'It's Nice To Have A Friend' is the most acoustic song wi
 
 # 7. What is sthe most acoustic album?
 Based on perceptual measure of acousticness and activity between 0.0 and 1.0. These values are taken by the average of all the songs on the album.
+
 ```python
 #Question 7: What is the most acoustic album?
 acoustic_albums = taylor_data[['album_name', 'acousticness']].groupby(['album_name'])
@@ -132,6 +134,7 @@ Observe that the album 'evermore' is the most acoustic album with an average aco
 
 # 8. What is the trend in acousticness over time?
 Based on perceptual measure of acousticness and activity between 0.0 and 1.0. These values for each song are then graphed compared to time to see the trend in acousticness over time in Taylor's career.
+
 ```python
 #Question 8: What is the trend in acousticness over time?
 acoustic_release = taylor_data[['album_release', 'acousticness']].dropna().sort_values('album_release', ascending=True)
@@ -144,4 +147,5 @@ matplotlib.pyplot.xlabel('Album Release Date (YYYY-MM-DD)')
 matplotlib.pyplot.ylabel('Acousticness')
 matplotlib.pyplot.show()
 ```
-Observe that there is no correlation between the date the album was released and acousticness of the album
+Observe that there is no correlation between the date the album was released and acousticness of the album.
+
