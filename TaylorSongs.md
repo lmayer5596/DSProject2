@@ -10,7 +10,7 @@ Worked with other members to create the code outline. Also helped contribute to 
 
 
 ## Jesigga Sigurdardottir 
-Researched, decided upon, and finalized the Data frame used. Finalized formatting of code, worked on and created questions. Also worked on explanations of questions with other teammates.  
+Researched, decided upon, and finalized the Data frame that we decided to use. Finalized formatting of code, worked on, created questions, and created slightly more sophisticated questions. Also worked on explanations of questions with other teammates.  
 
 ## Kiley Wonser
 Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team. Included descriptions of the queries into the README.md. 
