@@ -1,33 +1,39 @@
 # Lily Mayer
 Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results 
 
+
 # Gina Seo
 Worked with other members to create the code outline. Also helped contribute to finalizing SQL queries. Developed a good work ethic and management with the other teamates.
+
 
 # Jesigga Sigurdardottir 
 Found and finalized dataframe, finalized formating, created questions, and worked on explenations of wuestions.
 
+
 # Kiley Wonser
 Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
+
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
 ```
+
 
 Read in dataset from Github
 ```python
 #reads in dataset fron github
 data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-17/taylor_all_songs.csv')
 ```
+
+
 Subsets of the dataframe with the attributes that we will use.
 ```python
 #subsets the dataframe to only attributes of interest
 taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
 print(taylor_data)
 ```
+
 
 # Questions:
 # 1. What is the most danceable song?
