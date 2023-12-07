@@ -18,3 +18,4 @@ Delving into our queries and code, our team calculates how and why Swift's disco
 
 Given Swift's massive discography, from her debut in 2006 to the present day, we divided the variables into multiple subsets of the dataframe and only included specific attributes of interest. Out of all attributes, our team decided to pick out the album names, date of release, artist, featured artists, song name, danceability, energy, and accoustic. With this information, we then created 8 queries that guides us in implementing our code. 
 
+Before going into the queries, we imported pandas and matplotlib in order code and graph visual data into the system. From there, we implemented the Spotify API dataset from github with a variable called 'data' and created another variable called 'taylor_data' in order to extract the specific attributes of interest that we defined earlier.  
