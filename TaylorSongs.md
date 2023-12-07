@@ -50,8 +50,9 @@ print(taylor_data)
 
  ```python
 #Question 1: What is the most danceable song?
-dancing = taylor_data[['track_name', 'danceability']].sort_values('danceability', ascending=False)
-dancing_max = dancing.head(1)
+dancing = taylor_data[['track_name', 'danceability']]
+sorted_dancing = dancing.sort_values('danceability', ascending=False)
+dancing_max = sorted_dancing.head(1)
 print(dancing_max)
 ```
 Observe that the track 'I Think He Knows' is the most danceable song with a danceability of 0.897
@@ -62,8 +63,9 @@ Out of all the songs that were released from 2006 to 2023, this only takes in so
 
  ```python
 #Question 2: What is the most danceable album on average?
-dancing_albums = taylor_data[['album_name', 'danceability']].groupby(['album_name'])
-dancing_albums_sorted = dancing_albums.first().sort_values('danceability', ascending=False)
+dancing_albums = taylor_data[['album_name', 'danceability']]
+grouped_dancing_albums = dancing_albums.groupby(['album_name'])
+dancing_albums_sorted = grouped_dancing_albums.first().sort_values('danceability', ascending=False)
 dancing_albums_max = dancing_albums_sorted.head(1)
 print(dancing_albums_max)
 ```
@@ -75,8 +77,9 @@ This attribute is based on perceptual measure of intensity and activity between 
 
 ```python
 #Question 3:  What is the most energetic song?
-energy = taylor_data[['track_name', 'energy']].sort_values('energy', ascending=False)
-energy_max = energy.head(1)
+energy = taylor_data[['track_name', 'energy']]
+sorted_energy = energy.sort_values('energy', ascending=False)
+energy_max = sorted_energy.head(1)
 print(energy_max)
 ```
 Observe that the track 'Haunted' is the most energetic song with a energy level of 0.95
@@ -87,8 +90,9 @@ Based on perceptual measure of intensity and activity between 0.0 and 1.0 typica
 
 ```python
 #Question 4: What is the most energetic album on average?
-energy_albums = taylor_data[['album_name', 'energy']].groupby(['album_name'])
-energy_albums_sorted = energy_albums.first().sort_values('energy', ascending=False)
+energy_albums = taylor_data[['album_name', 'energy']]
+grouped_energy_albums = energy_albums.groupby(['album_name'])
+energy_albums_sorted = grouped_energy_albums.first().sort_values('energy', ascending=False)
 energy_albums_max = energy_albums_sorted.head(1)
 print(energy_albums_max)
 ```
@@ -100,8 +104,12 @@ Making a graph to see the trend of dancebility vs. energy for each song. The ene
 
 ```python
 #Question 5: How does energy correlate to danceability?
-energy_lst = pd.DataFrame(energy)['energy'].tolist()
-dancing_lst = pd.DataFrame(dancing)['danceability'].tolist()
+energy_dataframe = pd.DataFrame(energy)
+energy_lst = energy_dataframe['energy'].tolist()
+
+dancing_dataframe = pd.DataFrame(dancing)
+dancing_lst = dancing_dataframe['danceability'].tolist()
+
 plt.subplot(3, 1, 1)
 plt.scatter(energy_lst, dancing_lst)
 plt.title("Energy vs. Danceability")
@@ -116,8 +124,9 @@ Based on perceptual measure of acousticness and activity between 0.0 and 1.0.
 
 ```python
 #Question 6: What is the most acoustic song?
-acoustic = taylor_data[['track_name', 'acousticness']].sort_values('acousticness', ascending=False)
-acoustic_max = acoustic.head(1)
+acoustic = taylor_data[['track_name', 'acousticness']]
+sorted_acoustic = acoustic.sort_values('acousticness', ascending=False)
+acoustic_max = sorted_acoustic.head(1)
 print(acoustic_max)
 ```
 Observe that the track 'It's Nice To Have A Friend' is the most acoustic song with an acousticness of 0.971
@@ -128,8 +137,9 @@ Based on perceptual measure of acousticness and activity between 0.0 and 1.0. Th
 
 ```python
 #Question 7: What is the most acoustic album?
-acoustic_albums = taylor_data[['album_name', 'acousticness']].groupby(['album_name'])
-acoustic_albums_sorted = acoustic_albums.first().sort_values('acousticness', ascending=False)
+acoustic_albums = taylor_data[['album_name', 'acousticness']]
+acoustic_albums_grouped = acoustic_albums.groupby(['album_name'])
+acoustic_albums_sorted = acoustic_albums_grouped.first().sort_values('acousticness', ascending=False)
 acoustic_albums_max = acoustic_albums_sorted.head(1)
 print(acoustic_albums_max)
 ```
@@ -141,9 +151,17 @@ Based on perceptual measure of acousticness and activity between 0.0 and 1.0. Th
 
 ```python
 #Question 8: What is the trend in acousticness over time?
-acoustic_release = taylor_data[['album_release', 'acousticness']].dropna().sort_values('album_release', ascending=True)
-album_release_dates = pd.DataFrame(acoustic_release)['album_release'].tolist()
-acousticness_values = pd.DataFrame(acoustic_release)['acousticness'].tolist()
+acoustic_release = taylor_data[['album_release', 'acousticness']]
+acoustic_release = acoustic_release.dropna()
+sorted_acoustic_release = acoustic_release.sort_values('album_release', ascending=True)
+
+album_release_dataframe = pd.DataFrame(acoustic_release)
+album_release_dates = album_release_dataframe['album_release'].tolist()
+
+
+acousticness_dataframe = pd.DataFrame(acoustic_release)
+acousticness_values = acousticness_dataframe['acousticness'].tolist()
+
 matplotlib.pyplot.subplot(3, 1, 3)
 matplotlib.pyplot.scatter(album_release_dates, acousticness_values)
 matplotlib.pyplot.title("Album Release Dates vs. Acousticness")
