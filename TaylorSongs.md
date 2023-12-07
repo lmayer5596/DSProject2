@@ -1,6 +1,10 @@
 # Team Members and Personal Description
 
 
+## Roshni Gandhi 
+
+
+
 ## Lily Mayer
 Developed and implemented the majority of the code. Also helped to create queries, improve them, then implement them. Developed and expanded the script, explanations/interpretations, and analyses. Reviewed final submission with team members.
 
