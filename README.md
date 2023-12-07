@@ -20,9 +20,14 @@ Given Swift's massive discography, from her debut in 2006 to the present day, we
 
 Before delving into the queries, we imported pandas and matplotlib in order code and graphically represent visual data in the system. Subsequently, we implemented the Spotify API dataset from github using a variable called 'data' and created another variable called 'taylor_data' in order to extract the specific attributes of interest that we defined earlier.  
 
-# Queries
-For our first two queries we wanted to find the most danceble Taylor Swift song and the most danceble Taylor Swift album. In order to do that we selected the columns track_name and dancebility from the data and sorted the data in descending order. From this we were able to select the top track by calling the head of the data and print it using the print statement.
-We used this same process or the second two queries where we wanted to find the most energetic Taylor Swift song and the most energetic Taylor Siwft album. 
-For the fifth query we wanted to find the correlation between dancibility and energy represented by a graph. The first two lines intialized the data for dancibility and energy ratings. After that we used matplot subplot to create and position the graph. 
-For the following two queries we used the same method from the first four queries to find the most acoustic Taylor Swift song and the most acoustic Taylor Swift album. 
-For the eighth query we wanted to find the trend in acousticness of Taylor Swift albums over time using a confidence interval. We selected the columns acousticness and the album release date and sorted them in ascending order. From there we used the same method as the fifth clearly and used matplot subplot to create and position the graph. 
+# Queries 
+
+For our first two queries we wanted to find the most danceable Taylor Swift song and the most danceable Taylor Swift album. In order to do so, we selected the columns 'track_name' and 'danceability' from the dataset and sorted the data in descending order. From this, extracting the head of the of the sorted data, allowed us to find that 'I Think He Knows' was Swift's most danceable song with a danceability value of 0.897, '1989' was Swift's most danceable album with a value of 0.789. We made these results readable by calling print statements on them.  
+
+We used this same process for the third and fourth queries, where we wanted to find the most energetic Taylor Swift song and the most energetic Taylor Swift album. Using this similar approach, we found that the most energetic Taylor Swift song is 'Haunted' with a value of 0.95. The most energetic album is 'Red' with a value of 0.825.  
+
+For the fifth query we wanted to find the correlation between danceability, and energy represented by a graph. The first two lines initialized the data for danceability and energy ratings. After that we used the subplot function from matplotlib to create and position the graph. From this graph, we are able to see that energy and danceability are almost linearly related. 
+
+For the following two queries we used the same method from the first four queries to find the most acoustic Taylor Swift song and the most acoustic Taylor Swift album. The most acoustic song was 'It's Nice to Have a Friend' with a value of 0.971. The most acoustic album was 'Evermore' with a value of 0.833. 
+
+For the eighth query we wanted to find the trend in acousticness of Taylor Swift albums over time using a confidence interval. We selected the columns ‘acousticness’ and the album ‘release_date’ and sorted them in ascending order. From there we used the same method as the fifth query and used the subplot function in matplotlib to create and position the graph. We found there to be no correlation between the release date of the album and the acousticness of the album. 
