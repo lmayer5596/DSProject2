@@ -1,17 +1,20 @@
-# Lily Mayer
+# Team and personal Description
+
+## Lily Mayer
 Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results. 
 
 
-# Gina Seo
+## Gina Seo
 Worked with other members to create the code outline. Also helped contribute to finalizing SQL queries. Developed a good work ethic and management with the other teammates.
 
 
-# Jesigga Sigurdardottir 
+## Jesigga Sigurdardottir 
 Decided upon and finalized the Datta frame used, finalized formatting of code, worked on creating questions, and worked on explanations of questions.  
 
-# Kiley Wonser
+## Kiley Wonser
 Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
 
+# 
 # Code and Queries 
 
 
