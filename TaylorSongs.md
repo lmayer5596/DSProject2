@@ -2,7 +2,7 @@
 
 
 ## Lily Mayer
-Code development and implementation. Also, helped to create more sophisticated queries and implement them. Developed and expanded the script with members and reviewed the final results. 
+Developed and implemented the majority of the code. Also helped to create queries, improve them, then implement them. Developed and expanded the script, explanations/interpretations, and analyses. Reviewed final submission with team members.
 
 
 ## Gina Seo
@@ -32,7 +32,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesda
 ```
 
 
-Subsets of the dataframe with the attributes that we will use.
+Subsets the dataframe to select the attributes that we will use.
 ```python
 #subsets the dataframe to only attributes of interest
 taylor_data = data[['album_name', 'album_release', 'artist', 'featuring', 'track_name', 'danceability', 'energy', 'acousticness']]
@@ -42,7 +42,7 @@ print(taylor_data)
 
 # Questions:
 # 1. What is the most danceable song?
- Spotify's API takes in all the elements that went into creating a song and gives it a score from 0.0 to 1.0 on how "danceable" it is. Based on the how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity
+ Spotify's API takes in all the elements that went into creating a song and gives it a score from 0.0 to 1.0 on how "danceable" it is. This metric is measured by how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.
 
  ```python
 #Question 1: What is the most danceable song?
@@ -54,7 +54,7 @@ Observe that the track 'I Think He Knows' is the most danceable song with a danc
 
 
 # 2. What is the most danceable album? 
- Out of all the songs that were released from 2006 to 2023, this only takes in songs that were released as part of an album while excluding any songs that are not part of the main albums. This would mean that it takes in the average danceability score from each album and compare it to scores from other albums
+Out of all the songs that were released from 2006 to 2023, this only takes in songs that were released as part of an album while excluding any songs that are not part of the main albums. This would mean that it takes in the average danceability score from each album by adding the danceability of each song then dividing by the number of songs on the album then compares it to scores from other albums.
 
  ```python
 #Question 2: What is the most danceable album on average?
@@ -67,7 +67,7 @@ Observe that the album '1989' is the most danceable album with an average dancea
 
 
 # 3. What is the most energetic song?
-Based on perceptual measure of intensity and activity between 0.0 and 1.0 typically sounding more fast, loud, and noisy with more energy.
+This attribute is based on perceptual measure of intensity and activity between 0.0 and 1.0 typically sounding more fast, loud, and noisy with more energy.
 
 ```python
 #Question 3:  What is the most energetic song?
@@ -92,7 +92,7 @@ Observe that the album 'Red' is the most energetic album with an average energy 
 
 
 # 5. How does energy correlate to danceability?
-Making a graph to see the trend of dancebility vs. energy for each song.
+Making a graph to see the trend of dancebility vs. energy for each song. The energy variable is on the horizontal axis while the danceability variable is on the vertical axis. 
 
 ```python
 #Question 5: How does energy correlate to danceability?
@@ -104,7 +104,7 @@ plt.title("Energy vs. Danceability")
 plt.xlabel("Energy")
 plt.ylabel("Danceability")
 ```
-Observe that the energy and danceability are almost linearly related. As energy of the song increases, so the the danceability.
+Observe that the energy and danceability are positively linearly related. As energy of the song increases, so does the danceability.
 
 
 # 6. What is the most acoustic song?
@@ -119,7 +119,7 @@ print(acoustic_max)
 Observe that the track 'It's Nice To Have A Friend' is the most acoustic song with an acousticness of 0.971
 
 
-# 7. What is sthe most acoustic album?
+# 7. What is the most acoustic album?
 Based on perceptual measure of acousticness and activity between 0.0 and 1.0. These values are taken by the average of all the songs on the album.
 
 ```python
