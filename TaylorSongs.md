@@ -6,14 +6,14 @@ Developed and implemented the majority of the code. Also helped to create querie
 
 
 ## Gina Seo
-Worked with other members to create the code outline. Also helped contribute to finalizing SQL queries. Developed a good work ethic and management with the other teammates.
+Worked with other members to create the code outline. Also helped contribute to finalizing queries. Developed a good work ethic and management with the other teammates.
 
 
 ## Jesigga Sigurdardottir 
-Decided upon and finalized the Datta frame used, finalized formatting of code, worked on creating questions, and worked on explanations of questions.  
+Researched, decided upon, and finalized the Data frame used. Finalized formatting of code, worked on and created questions. Also worked on explanations of questions with other teammates.  
 
 ## Kiley Wonser
-Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team.
+Helped to create slightly more sophisticated questions. Developed and expanded the descriptions with members and reviewed the final results with the team. Included descriptions of the queries into the README.md. 
 
 
 # Code and Queries 
