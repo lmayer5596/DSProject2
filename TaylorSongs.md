@@ -2,7 +2,7 @@
 
 
 ## Roshni Gandhi 
- Created the queries for half the questions and fililazation of queries.
+Created the queries for half the questions, reformatted and finalized all queries. Worked with team on creation of graphs for visualization. 
 
 
 ## Lily Mayer
